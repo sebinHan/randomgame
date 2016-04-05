@@ -1,8 +1,7 @@
 package kr.hs.emirim.sbb9918.monchicken;
 
 import android.os.Bundle;
-        import android.support.v7.app.ActionBarActivity;
-        import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 /**
@@ -15,9 +14,9 @@ public class ResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_result);
 
-        mResult = (TextView)findViewById(R.id.result);
+        mResult = (TextView) findViewById( R.id.result);
         mResult.setText("결과");
     }
 }
