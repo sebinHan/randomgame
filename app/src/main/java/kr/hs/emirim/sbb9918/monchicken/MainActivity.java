@@ -33,18 +33,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         String name = mName.getText().toString();
-        /*if (name == null){
+       /*if (name.equals("")){
             Toast.makeText(this,"이름을 입력해 주세용", Toast.LENGTH_LONG).show();
 
         }else{
             Toast.makeText(this,name+ "씨 배고파요!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("Name", name);
+            intent.putExtra("Age",18);
             startActivity(intent);
         }*/
-
-        try {
+       try {
             Toast.makeText(this,name+ "씨 배고파요!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("name", name);
+            intent.putExtra("age",18);
+
             startActivity(intent);
 
         }catch (NullPointerException e){
