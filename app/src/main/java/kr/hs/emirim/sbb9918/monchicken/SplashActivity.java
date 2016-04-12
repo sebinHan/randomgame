@@ -13,16 +13,15 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash);
 
-        Handler handler = new Handler();//splash와 타이머 등등 가능
+        Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                //시작시킬 엑티비티의 intent
+
                 startActivity(intent);
-                overridePendingTransition(0,R.anim.zoom_exit);//splash엑티비티로 들어갈때, 나갈때를 매개변수로
-                finish();//현재 activity를 마감
-                //안하면 바로 intro로 넘어감
+                overridePendingTransition(0,R.anim.zoom_exit);
+                finish();
             }
 
         },3000);

@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onResume() {
         super.onResume();
         mName.setText("");
-    }
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }//onResume 이전 페이지로 돌아갈때 실행됨
 
     @Override
     public void onClick(View v) {
